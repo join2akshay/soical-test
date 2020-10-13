@@ -10,8 +10,13 @@ export default function AddDetails() {
     let {state,setState}=useContext(DataContext)
     const[address,setAddress]=useState(state.address)
    useEffect(()=>{
-            setState({...state,address:address.label})
+            updateState()
    },[address])
+
+   const updateState=()=>{
+    setState({...state,address:address.label})
+   }
+   
     const[uploadImage,setUploadImage]=useState(false)
     const handleSubmit=(e)=>{
         e.preventDefault()
