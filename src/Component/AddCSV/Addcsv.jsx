@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import {DataContext} from '../../ContextAPI/DataContext'
 export default function Addcsv({setStep}) {
 
-    let {state,setState}=useContext(DataContext)
+    let {setState}=useContext(DataContext)
 
 
 
@@ -16,7 +16,6 @@ export default function Addcsv({setStep}) {
 
 
         };
-        // start reading the file. When it is done, calls the onload event defined above.
         reader.readAsBinaryString(e.target.files[0]);
 
 
